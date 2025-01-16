@@ -1,13 +1,14 @@
 <?php
 	session_start();
+	if(isset($_SESSION['email'])){
 ?>
 <html>
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,intial-scale=1">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  	<script type="text/javascript" src="bootstrap/js/juqery_latest.js"></script>
-  	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+  	<script type="text/javascript" src="../bootstrap/js/juqery_latest.js"></script>
+  	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg" style="background-color:#194350;">
@@ -23,3 +24,7 @@
 	</nav>
 </body>
 </html>
+<?php }
+else{
+  header('location:../index.php');
+}
